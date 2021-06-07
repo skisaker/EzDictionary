@@ -1,0 +1,19 @@
+import random
+import os
+import threading
+import string
+import json
+
+count = 0
+pw = json.loads(open('pw.json').read())
+random.seed = (os.urandom(2013))
+
+
+url = 'https://demo.testfire.net/doLogin'
+for x in pw:
+    x = ''.join(random.choice(pw))
+    count = +1
+
+
+
+print("Username:", "Trying:", x,"Current Try:",count, "Target:", url)
